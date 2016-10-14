@@ -3453,7 +3453,7 @@ ctrl = 1
 [state -2, Diagonal]
 type = posset
 trigger1 = statetype != a
-y = -((Pos x+Camerapos x)+5)/40*2.5
+y = -((Pos x+Camerapos x)+20)/60*2.5
 ;---------------------------------------------------------------------------
 ; States that are executed when in self's state file (use statedef -3)
 ;---------------------------------------------------------------------------
