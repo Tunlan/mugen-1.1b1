@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
+<title>M.U.G.E.N Console</title>
+<style type="text/css">
+
+/*
+M.U.G.E.N documentation stylesheet.
+
+
+Modified from voidspace.css.
+
+:Authors: Ian Bicking, Michael Foord
+:Contact: fuzzyman@voidspace.org.uk
+:Date: 2005/08/26 
+:Version: 0.1.0
+:Copyright: This stylesheet has been placed in the public domain.
+
+Stylesheet for Docutils.
+Based on ``blue_box.css`` by Ian Bicking
+and ``html4css1.css`` revision 1.46.
+*/
+
+@import url(html4css1.css);
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+em, i {
+  font-family: Times New Roman, Times, serif;
+}
+
+a {
+  color: #5577EE;
+  text-decoration: none;
+}
+
+a.reference.internal {
+  font-size: 80%;
+}
+
+a.toc-backref {
+  color: black;
+  text-decoration: none;
+}
+
+a.toc-backref:hover {
+  background-color: inherit;
+}
+
+a:hover {
+  background-color: #cccccc;
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+div.attention, div.caution, div.danger, div.error, div.hint,
+div.important, div.note, div.tip, div.warning {
+  background-color: #cccccc;
+  padding: 3px;
+  width: 80%;
+}
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title  {
+  text-align: center;
+  background-color: #999999;
+  display: block;
+  margin: 0;
+}
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: #cc0000;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #999999;
+  display: block;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  border: thin solid black;
+  /* This makes the borders rounded on Mozilla, which pleases me */
+  -moz-border-radius: 8px;
+  padding: 4px;
+}
+
+h1 {
+  background-color: #445BAA;
+  color: #ffffff;
+  border: medium solid black;
+}
+
+h1 a.toc-backref, h2 a.toc-backref { 
+  color: #ffffff;
+}
+
+h2 {
+  background-color: #667788;
+  color: #ffffff;
+  border: thin solid black;
+}
+
+h3, h4, h5, h6 {
+  background-color: #cccccc;
+  color: #000000;
+}
+
+h3 a.toc-backref, h4 a.toc-backref, h5 a.toc-backref, 
+h6 a.toc-backref { 
+  color: #000000;
+}
+
+h1.title {
+  text-align: center;
+  background-color: #445BAA;
+  color: #eeeeee;
+  border: thick solid black;
+  -moz-border-radius: 20px;
+}
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+table.footnote {
+  padding-left: 0.5ex;
+}
+
+table.citation {
+  padding-left: 0.5ex
+}
+
+pre.literal-block, pre.doctest-block {
+  border: thin black solid;
+  padding: 5px;
+}
+
+.image img { border-style : solid;
+            border-width : 2px;
+}
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+  font-size: 100%;
+}
+
+code, tt {
+  color: #000066;
+  font-size: 120%;
+}
+
+</style>
+</head>
+<body>
+<div class="document" id="m-u-g-e-n-console">
+<h1 class="title">M.U.G.E.N Console</h1>
+
+<p>New in M.U.G.E.N 1.1 is the Mugen Console (mconsole).  It allows users to execute various commands similar to the command prompt in Windows.  The mconsole is a tool primarily for testing and debugging and is not intended for normal gameplay.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#usage" id="id1">Usage</a></li>
+<li><a class="reference internal" href="#commands" id="id2">Commands</a><ul>
+<li><a class="reference internal" href="#clear" id="id3">clear</a></li>
+<li><a class="reference internal" href="#changestate" id="id4">changestate</a></li>
+<li><a class="reference internal" href="#clearclipboard" id="id5">clearclipboard</a></li>
+<li><a class="reference internal" href="#consoletoggle" id="id6">consoletoggle</a></li>
+<li><a class="reference internal" href="#forcestand" id="id7">forcestand</a></li>
+<li><a class="reference internal" href="#fps" id="id8">fps</a></li>
+<li><a class="reference internal" href="#framestep" id="id9">framestep</a></li>
+<li><a class="reference internal" href="#help" id="id10">help</a></li>
+<li><a class="reference internal" href="#lifereset" id="id11">lifereset</a></li>
+<li><a class="reference internal" href="#matchreset" id="id12">matchreset</a></li>
+<li><a class="reference internal" href="#maxpower" id="id13">maxpower</a></li>
+<li><a class="reference internal" href="#maxpowermode" id="id14">maxpowermode</a></li>
+<li><a class="reference internal" href="#pause" id="id15">pause</a></li>
+<li><a class="reference internal" href="#quit" id="id16">quit</a></li>
+<li><a class="reference internal" href="#roundreset" id="id17">roundreset</a></li>
+<li><a class="reference internal" href="#screenshot" id="id18">screenshot</a></li>
+<li><a class="reference internal" href="#setlife" id="id19">setlife</a></li>
+<li><a class="reference internal" href="#setroundtime" id="id20">setroundtime</a></li>
+<li><a class="reference internal" href="#showclsn" id="id21">showclsn</a></li>
+<li><a class="reference internal" href="#toggleai" id="id22">toggleai</a></li>
+<li><a class="reference internal" href="#togglelifebars" id="id23">togglelifebars</a></li>
+<li><a class="reference internal" href="#toggleplayer" id="id24">toggleplayer</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id1">Usage</a></h1>
+<p>The mconsole can be activated and deactivated by pressing the Control + tilde (Ctrl + ~) keys.  Once the console is active, commands can be typed in and executed by M.U.G.E.N.  For example, the F12 key will take a screenshot of the current screen.  To do the same in the mconsole, just type 'screenshot' (without quotes) and press enter.  The result will be the same as hitting the F12 key.</p>
+<p>MConsole will will keep track of commands that have been executed.  To cycle through the history of commands, press the up or down arrows.  The right and left arrows will move the cursor in case corrections or changes to the command are necessary before execution.</p>
+<p>The mconsole is still a work in progress and some commands may not work as expected.  While the console is activated, player input keys will be disabled.</p>
+</div>
+<div class="section" id="commands">
+<h1><a class="toc-backref" href="#id2">Commands</a></h1>
+<div class="section" id="clear">
+<h2><a class="toc-backref" href="#id3">clear</a></h2>
+<p>Clears the console.  No parameters.</p>
+</div>
+<div class="section" id="changestate">
+<h2><a class="toc-backref" href="#id4">changestate</a></h2>
+<p>changestate &lt;player #&gt; &lt;state number&gt;
+Changes the state of a player to the specified state if it exists.</p>
+<p>Example:  To change player 1 to state 5000 use:  changestate 1 5000</p>
+</div>
+<div class="section" id="clearclipboard">
+<h2><a class="toc-backref" href="#id5">clearclipboard</a></h2>
+<p>Clears the debug clipboard.  No parameters.</p>
+</div>
+<div class="section" id="consoletoggle">
+<h2><a class="toc-backref" href="#id6">consoletoggle</a></h2>
+<p>Shows or hides the console.  No parameters.  This is the same as pressing Ctrl+~.</p>
+</div>
+<div class="section" id="forcestand">
+<h2><a class="toc-backref" href="#id7">forcestand</a></h2>
+<p>Forces all players into the stand state.  No parameters.  This is the same as using the Ctrl+I debug key.</p>
+</div>
+<div class="section" id="fps">
+<h2><a class="toc-backref" href="#id8">fps</a></h2>
+<p>Shows or hides the FPS display in the upper right corner of the screen.  No parameters.</p>
+</div>
+<div class="section" id="framestep">
+<h2><a class="toc-backref" href="#id9">framestep</a></h2>
+<p>Shows the next frame of output.  Only works when the game is paused.</p>
+</div>
+<div class="section" id="help">
+<h2><a class="toc-backref" href="#id10">help</a></h2>
+<p>Displays a list of valid commands.</p>
+</div>
+<div class="section" id="lifereset">
+<h2><a class="toc-backref" href="#id11">lifereset</a></h2>
+<p>Resets all players' life and power to full.  This is the same as pressing the Space Bar when debug mode is active.</p>
+</div>
+<div class="section" id="matchreset">
+<h2><a class="toc-backref" href="#id12">matchreset</a></h2>
+<p>Resets the match back to Round 1.  This is the same as using the Shift+F4 debug key.</p>
+</div>
+<div class="section" id="maxpower">
+<h2><a class="toc-backref" href="#id13">maxpower</a></h2>
+<p>Increase power meter of all players to max.  This is the same as using the F3 debug key.</p>
+</div>
+<div class="section" id="maxpowermode">
+<h2><a class="toc-backref" href="#id14">maxpowermode</a></h2>
+<p>Toggles maximum power mode on and off.  This will cause power to always be full for all players while it's on.  This is the same as using the Ctrl+Shift+F3 debug key.</p>
+</div>
+<div class="section" id="pause">
+<h2><a class="toc-backref" href="#id15">pause</a></h2>
+<p>Pauses the game.  This is the same as using the pause key except this will pause on any screen.  Pausing on screens other than the fight screen may cause graphical issues.</p>
+</div>
+<div class="section" id="quit">
+<h2><a class="toc-backref" href="#id16">quit</a></h2>
+<p>Immediately quits M.U.G.E.N...  no questions asked.</p>
+</div>
+<div class="section" id="roundreset">
+<h2><a class="toc-backref" href="#id17">roundreset</a></h2>
+<p>Resets the current round.  This is the same as using the F4 debug key.</p>
+</div>
+<div class="section" id="screenshot">
+<h2><a class="toc-backref" href="#id18">screenshot</a></h2>
+<p>Takes a screenshot and saves it to the location where the M.U.G.E.N executable is located.</p>
+</div>
+<div class="section" id="setlife">
+<h2><a class="toc-backref" href="#id19">setlife</a></h2>
+<p>Sets the life for a specific player.
+setlife &lt;player #&gt; &lt;life&gt;</p>
+<p>Example:   setlife 1 1000</p>
+</div>
+<div class="section" id="setroundtime">
+<h2><a class="toc-backref" href="#id20">setroundtime</a></h2>
+<p>Sets the round time to the specified time.
+setroundtime &lt;timeleft&gt;</p>
+<p>Example:  setroundtime 20</p>
+</div>
+<div class="section" id="showclsn">
+<h2><a class="toc-backref" href="#id21">showclsn</a></h2>
+<p>Cycles through the various displays of collision boxes, target data (including remaining juggle points) and NotHitBy attributes.  This is the same as using the Ctrl+C debug key.</p>
+</div>
+<div class="section" id="toggleai">
+<h2><a class="toc-backref" href="#id22">toggleai</a></h2>
+<p>Turns the specified player's AI on or off.  This is the same as using the Ctrl+# debug keys.
+toggleai &lt;player #&gt;</p>
+<p>Example:  If player 2's AI is on then &quot;toggleai 2&quot; will turn it off.</p>
+</div>
+<div class="section" id="togglelifebars">
+<h2><a class="toc-backref" href="#id23">togglelifebars</a></h2>
+<p>Hides or shows the lifebars.  No parameters.  This is the same as using the Ctrl+L debug key.</p>
+</div>
+<div class="section" id="toggleplayer">
+<h2><a class="toc-backref" href="#id24">toggleplayer</a></h2>
+<p>Enables or disables the specified player.  This is the same as using the Ctrl+Alt+# debug keys.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

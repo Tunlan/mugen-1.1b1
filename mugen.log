@@ -1,0 +1,195 @@
+---------------------------------------------------
+M.U.G.E.N ver 1.1.0 Beta 1 P1 (2013.08.11) status log
+---------------------------------------------------
+Parsing command line...
+Command line: C:\Users\Juan\Desktop\mugen-1.1b1\mugen.exe
+Parse command line OK
+Initializing...
+Allocating game variables
+Reading configuration file...Setting language "en".
+OK
+Initializing timer...performance timer enabled...frequency 2648789...OK
+Initializing keyboard...configuring...OK
+Initializing input engine...OK
+Initializing sound...OK
+Initializing BGM...  OK
+Initializing graphics...gameCoord 1280x720...render mode 0_17...trying 1280x720x16 mode 0x0...success...OK
+Setting callbacks...OK
+Initializing font...OK
+Initializing game variables...OK
+Session RNG seed is 1476148237
+Loading system fonts...OK
+Loading options...
+Initializing pads...failed
+Reinitializing input engine...OK
+Remapping keys...OK
+Reinitializing input engine...OK
+Options loaded OK
+Loading system...
+  Load system file system.def...OK
+  Load system spr...OK
+  Load system snd...OK
+  Load system fonts...OK
+  Load system anim...OK
+  Load [Title Info]...OK
+  Load [Option Info]...OK
+  Load [Select Info]...OK
+  Load [VS Screen]...OK
+  Load [Victory Screen]...OK
+  Load [Demo Mode]...OK
+  Load [Continue Screen]...OK
+  Load [Game Over Screen]...OK
+  Load [Win Screen]...OK
+  Load [Survival Results Screen]...OK
+  Load [Default Ending]...OK
+  Load [End Credits]...OK
+  Load TitleBG...VersusBG...VictoryBG...SelectBG...OptionBG...OK
+  Loading fight data
+    Opening fight data file data/mugen1/fight.def...OK
+    Reading [Files]...OK
+    Loading fonts...OK
+    Load fight anim...OK
+    Reading [Lifebar]...[Turns Lifebar]...[Simul Lifebar]...[Powerbar]...
+    [Face]...[Simul Face]...[Turns Face]...
+    [Name]...[Simul Name]...[Turns Name]...
+    [Time]...[Combo]...[Round]...[WinIcon]...OK
+    Allocating explods...OK
+  Fight data loaded OK
+Lua initing
+Lua init complete
+System loaded OK
+Initialize OK
+Set up graphics...timer...OK
+
+Entering gameflow loop
+Gameflow 0
+Gameflow 1
+Gameflow 2
+Initializing character info...OK
+Initializing select screen...finding characters...OK
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Game loop init
+Unreserved all palettes
+Charsel init
+Selected char 1 on teamslot 0.0
+Char kfm720.def (1) request pal 3 3F (3F) -> reserved 3 (37)
+Loading character chars/kfm720/kfm720.def...
+  Loading info...OK
+  Loading cmd command set kfm720.cmd...OK
+  Loading cns kfm720.cns...OK
+  Loading cmd state entry kfm720.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff kfm720.sff...OK
+  Loading anim kfm720.air...OK
+  Loading snd kfm.snd...OK
+  Loading pals...OK
+  Loading learned AI kfm720.ai...OK
+  3013 expressions (979 on trigger lines)
+Character kfm720.def loaded OK
+New char Kung Fu Man 720 loaded into cache: (1/4 cached) Load time: 70.000ms
+Player Kung Fu Man 720 cache count reduced: 0
+Selected char 1 on teamslot 1.0
+Char kfm720.def (1) request pal 3 3F (37) -> reserved 4 (27)
+End of charsel loop
+Game loop deinit
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Entering versus screen.
+Unloading match assets
+Freeing players
+Game loop init
+Versus screen init
+End of versus screen loop
+Game loop deinit
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 142623736
+Reset persist vars team 0
+Reset persist vars team 1
+Player Kung Fu Man 720 cache count increased: 1
+Player Kung Fu Man 720 cache count increased: 2
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 36.30s
+Total frames: 2178 	Skipped frames: 1
+Avg game rate: 60.00
+Avg frame rate: 59.97
+
+Finishing match
+Freeing players
+Save persist vars P56 Kung Fu Man 720
+Player Kung Fu Man 720 cache count reduced: 1
+Save persist vars P57 Kung Fu Man 720
+Player Kung Fu Man 720 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Unreserved all palettes
+Charsel init
+Game loop deinit
+Canceled character select.
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Returned from gameflow loop
+Deinitializing...
+Frames      : 2637
+Time elapsed: 44.910 sec
+ticks: 4491, tps: 100, start 43, end 4534
+
+Unloading match assets
+Freeing players
+Clearing player cache...Freeing player RC Kung Fu Man 720...CMD...CNS...SFF...AIR...SND...Misc...OK
+OK
+Freeing character info...OK
+Freeing select screen...OK
+Freeing fight data...OK
+Freeing system data...OK
+Freeing game variables...Unloading match assets
+Freeing players
+OK
+Deinitializing input...pad...keyboard...OK
+Removing callbacks...OK
+Deintializing timer...OK
+Deinitializing graphics...OK
+Deinitializing BGM...OK
+Deinitializing sound...OK
+Successful program termination.
+
+Log file successfully closed.
