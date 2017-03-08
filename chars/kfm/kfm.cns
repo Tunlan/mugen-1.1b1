@@ -3468,3 +3468,6 @@ triggerall = Time = 1
 trigger1 = stateno = 52 ;Jump land
 trigger2 = stateno = 106 ;Run-back land
 value = 40, 0
+
+
+;Se hace una prueba de un relase
